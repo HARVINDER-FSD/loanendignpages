@@ -1,0 +1,287 @@
+/* Global Styles & Design Enhancements for Bootstrap 5 Loan Lending Pages */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0d6efd;
+  --primary-dark: #0a58ca;
+  --accent-emerald: #10b981;
+  --accent-teal: #06b6d4;
+  --accent-amber: #f59e0b;
+  --dark-navy: #0f172a;
+  --slate-bg: #f8fafc;
+  --card-border: rgba(226, 232, 240, 0.8);
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #334155;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Badges & Trust Elements */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.plaid-security-badge {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+
+/* Form Styles & Wizard */
+.loan-card-form {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.step-indicator::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.step-indicator-item {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: #ffffff;
+  padding: 0 8px;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #64748b;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.step-indicator-item.active .step-circle {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.step-indicator-item.completed .step-circle {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.step-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.step-indicator-item.active .step-title {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.15);
+}
+
+.input-group-text {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #64748b;
+}
+
+.form-control, .form-select {
+  border-color: #cbd5e1;
+  padding: 0.7rem 0.95rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.form-label small {
+  font-weight: 400;
+  color: #64748b;
+}
+
+/* Feature & Stat Cards */
+.feature-box {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 16px;
+}
+
+.feature-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08) !important;
+}
+
+.hero-overlay-dark {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+}
+
+.hero-gradient-purple {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+}
+
+.hero-gradient-emerald {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #0f172a 100%);
+}
+
+/* Plaid Mockup styling */
+.plaid-pill {
+  background: #000000;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.btn-emerald-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.btn-emerald-gradient:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Premium Hero Styles with High-Resolution Background Images */
+.hero-bg-fintech {
+  position: relative;
+  background: linear-gradient(105deg, rgba(10, 25, 47, 0.94) 0%, rgba(15, 23, 42, 0.88) 50%, rgba(15, 23, 42, 0.72) 100%),
+              url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0 85px;
+}
+
+.hero-bg-speed {
+  position: relative;
+  background: linear-gradient(115deg, rgba(30, 27, 75, 0.95) 0%, rgba(49, 46, 129, 0.88) 45%, rgba(15, 23, 42, 0.75) 100%),
+              url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0 85px;
+}
+
+.hero-bg-corporate {
+  position: relative;
+  background: linear-gradient(110deg, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.90) 50%, rgba(6, 78, 59, 0.75) 100%),
+              url('https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0 85px;
+}
+
+.hero-glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+}
+
+.hero-glass-card-inner {
+  background: rgba(15, 23, 42, 0.65);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pill-glow-emerald {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.pill-glow-amber {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.floating-stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px 18px;
+}
+

