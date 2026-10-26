@@ -1,6 +1,6 @@
 /**
  * Loan Lending Application & Single-Step Form Logic
- * Connected to Formspree: https://formspree.io/f/xppqpkyj
+ * Connected to Formspree: https://formspree.io/f/xoeeeevp
  * Pure Static Frontend: Handles Formspree submission, input masks, 
  * Plaid security indicators, and form submission confirmation modal.
  */
@@ -32,11 +32,12 @@ function initCampaignToken() {
 // Single-step loan application form submission via Formspree AJAX
 function initSingleStepForms() {
   const forms = document.querySelectorAll('.loan-application-form');
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xppqpkyj';
 
   forms.forEach(form => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const formEndpoint = form.getAttribute('action') || 'https://formspree.io/f/xoeeeevp';
 
       // Check browser validity
       if (!form.checkValidity()) {
@@ -79,22 +80,23 @@ function initSingleStepForms() {
       const userEmail = form.querySelector('input[name="email"]')?.value || 'willsmiths987@gmail.com';
 
       try {
-        // Send data directly to Formspree endpoint
-        await fetch(FORMSPREE_ENDPOINT, {
+        // Send data directly to form endpoint
+        const response = await fetch(formEndpoint, {
           method: 'POST',
           body: formData,
           headers: {
             'Accept': 'application/json'
           }
         });
-      } catch (err) {
-        console.warn('Formspree network notification handled:', err);
-      } finally {
-        // Reset submit button state
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalHtml;
 
-        // Show confirmation modal
+        const result = await response.json().catch(() => null);
+
+        if (!response.ok) {
+          const errDetail = result?.errors?.map(e => e.message).join(', ') || result?.error || 'Submission rejected by Formspree';
+          throw new Error(errDetail);
+        }
+
+        // Show confirmation modal on successful delivery
         const modalRef = document.getElementById('confirmationModal');
         if (modalRef) {
           const confName = document.getElementById('confApplicantName');
@@ -120,6 +122,14 @@ function initSingleStepForms() {
         // Reset form
         form.reset();
         form.classList.remove('was-validated');
+
+      } catch (err) {
+        console.error('Formspree submission error:', err);
+        alert(`Notice: Formspree error while sending data to email:\n${err.message}\n\nPlease check your Formspree Form ID in loan-form.js.`);
+      } finally {
+        // Reset submit button state
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHtml;
       }
     });
   });
