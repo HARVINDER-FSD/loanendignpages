@@ -542,10 +542,12 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-5">
+  <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container">
       <div class="row g-4 mb-4">
-        <div class="col-lg-5">
+
+        <!-- Brand Column: full width on mobile, 5/12 on large -->
+        <div class="col-12 col-lg-5">
           <div class="d-flex align-items-center gap-2 mb-3">
             <i class="bi bi-shield-check text-primary fs-3"></i>
             <span class="fs-4 fw-bold text-white">Advance America</span>
@@ -555,34 +557,44 @@
             disclosures, fair APR rates, and prompt customer assistance.
           </p>
           <div class="small text-secondary">
-            Inquiries & Submission Contact: <a href="mailto:willsmiths987@gmail.com"
-              class="text-primary text-decoration-none">willsmiths987@gmail.com</a>
+            Inquiries &amp; Submission Contact:<br>
+            <a href="mailto:willsmiths987@gmail.com"
+              class="text-primary text-decoration-none fw-semibold">willsmiths987@gmail.com</a>
           </div>
         </div>
 
-        <div class="col-6 col-lg-3">
+        <!-- Navigation Column: 6/12 on mobile, 4/12 on sm, 3/12 on lg -->
+        <div class="col-6 col-sm-4 col-lg-3">
           <h6 class="text-white fw-bold mb-3">Navigation</h6>
-          <ul class="list-unstyled small d-flex flex-column gap-2 text-secondary">
-            <li><a href="#apply-section" class="text-secondary text-decoration-none">Application Form</a></li>
-            <li><a href="#how-it-works" class="text-secondary text-decoration-none">How It Works</a></li>
-            <li><a href="#security" class="text-secondary text-decoration-none">Plaid Security</a></li>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="#apply-section" class="text-secondary text-decoration-none footer-link">Application Form</a></li>
+            <li><a href="#how-it-works" class="text-secondary text-decoration-none footer-link">How It Works</a></li>
+            <li><a href="#security" class="text-secondary text-decoration-none footer-link">Plaid Security</a></li>
           </ul>
         </div>
 
-        <div class="col-6 col-lg-4">
-          <h6 class="text-white fw-bold mb-3">Compliance & Security</h6>
-          <p class="text-secondary small mb-2">
+        <!-- Compliance Column: 6/12 on mobile, 8/12 on sm, 4/12 on lg -->
+        <div class="col-6 col-sm-8 col-lg-4">
+          <h6 class="text-white fw-bold mb-3">Compliance &amp; Security</h6>
+          <p class="text-secondary small mb-3">
             Loans are subject to credit approval and verification. Rates range from 5.99% to 29.99% APR.
           </p>
-          <div class="d-flex gap-2">
+          <div class="d-flex flex-wrap gap-2">
             <span class="badge bg-secondary">FDIC Partner Banks</span>
             <span class="badge bg-secondary">Equal Housing Lender</span>
           </div>
         </div>
+
       </div>
 
-      <div class="border-top border-secondary pt-3 text-center small text-secondary">
-        &copy; 2026 Advance America Lending Inc. All rights reserved. Pure Static Frontend.
+      <!-- Bottom Bar -->
+      <div class="border-top border-secondary pt-3">
+        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-2 small text-secondary text-center text-sm-start">
+          <span>&copy; 2026 Advance America Lending Inc. All rights reserved.</span>
+          <span class="d-flex align-items-center gap-1 text-nowrap">
+            <i class="bi bi-lock-fill text-primary"></i> 256-Bit SSL Encrypted
+          </span>
+        </div>
       </div>
     </div>
   </footer>

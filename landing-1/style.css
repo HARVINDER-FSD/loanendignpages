@@ -285,3 +285,42 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   padding: 12px 18px;
 }
 
+/* ===== Footer Responsive Styles ===== */
+.footer-link {
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #60a5fa !important;
+}
+
+/* Mobile footer adjustments */
+@media (max-width: 575.98px) {
+  footer .col-6 {
+    font-size: 0.82rem;
+  }
+
+  footer .badge {
+    font-size: 0.72rem;
+    padding: 4px 8px;
+  }
+
+  footer .fs-4 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Small screen: keep brand text readable */
+@media (max-width: 767.98px) {
+  footer .col-12 {
+    text-align: center;
+  }
+
+  footer .col-12 .d-flex {
+    justify-content: center;
+  }
+
+  footer .d-flex.flex-wrap {
+    justify-content: center;
+  }
+}
